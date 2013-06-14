@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+
+<!-- http://www.google.com/webfonts -->
+<link rel="stylesheet" type="text/css"
+    href="http://fonts.googleapis.com/css?family=Judson"></link>
+
+    <style>
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    font-family: 'Judson', serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 54px;
+    padding-top: 5px;
+    padding-bottom: 25px;
+    cursor: pointer;  
+}
+
+#main {
+    display: table;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+
+#nav ul {
+    list-style-type: none;
+}
+
+#nav li {
+    padding-top: 0px;
+    padding-bottom: 50px;
+    padding-right: 25px;
+    padding-left: 0px;
+    cursor: pointer;  
+}
+
+#nav li:hover {
+    text-decoration: underline;
+} 
+
+#nav {
+    display: table-cell;
+    width: 200px;
+    text-align: right;
+    border-right: 2px dotted #888888;
+}
+
+.hidden {
+    display: none;
+}
+
+.content {
+    display: table-cell;
+    width: 650px;
+    padding-left: 50px;
+}
+</style>
+
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>          
+<script type="text/javascript">                             
+$(document).ready(function(){ 
+    $("h1, #nav li").click(function(e){
+        var menuId = e.target.id;
+        $(".content").fadeOut("fast", function() {
+            $(".content").removeClass("content");
+            $("#" + menuId + "Content").addClass("content");
+            $("#" + menuId + "Content").hide();
+            $("#" + menuId + "Content").removeClass("hidden");
+            $("#" + menuId + "Content").fadeIn();
+        });
+    });
+ });
+ </script>   
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1 id="frontPage">Jesse Plymale</h1>
+        <div id="main">
+            <div id="nav">
+                <ul>
+                    <li id="softwareDesign">Software Design</li>
+                    <li id="music">Music</li>
+                    <li id="faith">Faith</li>
+                    <li id="aboutMe">Other Things</li>
+                </ul>
+            </div>
+            <div class="content" id="frontPageContent">
+            <p>
+            Welcome to my spot on the web.
+            </p>
+            </div>
+            <div class="hidden" id="softwareDesignContent">
+            <p>I am a software engineer with 
+            <a href="http://www.languagecomputer.com">Language Computer Corporation</a>.
+            </p>
+            <p>Visit me at <a href="http://www.linkedin.com/in/jesseplymale">LinkedIn</a>.
+            </p>
+            </div>
+            <div class="hidden" id="musicContent">
+            <p>One of my favorite things to do is play music.</p>
+            <p>Check me out on <a href="http://www.youtube.com/user/jesseplymale">YouTube</a>.</p>
+            </div>
+            <div class="hidden" id="faithContent">
+            <p>
+            I believe we owe everything we are to God. All of us fall short
+            of his best--but thankfully he extends His forgiveness to all of us,
+            if we trust in His Son, Jesus Christ.
+            </p>
+            
+            <blockquote>But God demonstrates his own love for us in this: 
+            While we were still sinners, Christ died for us.</blockquote>
+            
+            <p style="text-align:right" >--<a href='http://www.biblegateway.com/passage/?search=romans%205:8&version=NIV'>Romans 5:8</a>
+            </p>
+            
+            </div>
+            <div class="hidden" id="aboutMeContent">
+            <p>
+            I like to run. 
+            I am a member of the <a href="http://www.dallasrunningclub.com/">Dallas Running Club</a>
+            and the <a href="http://www.planopacers.org/">Plano Pacers</a>.
+            </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
