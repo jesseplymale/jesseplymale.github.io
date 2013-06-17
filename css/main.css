@@ -9,8 +9,6 @@ body {
 h1 {
     text-align: center;
     font-size: 54px;
-    padding-top: 5px;
-    padding-bottom: 25px;
     cursor: pointer;
 }
 
@@ -35,12 +33,13 @@ h1 {
 
 #nav ul {
     list-style-type: none;
+    padding-left: 0;
 }
 
 #nav li {
     padding-top: 0px;
     padding-bottom: 50px;
-    padding-right: 25px;
+    padding-right: 30px;
     padding-left: 0px;
 }
 
@@ -55,13 +54,14 @@ h1 {
 
 #nav {
     display: table-cell;
-    width: 200px;
+    width: 120px;
     text-align: right;
     border-right: 2px dotted #888888;
+    font-size: 0.8em;
 }
 
 .content {
     display: table-cell;
-    width: 650px;
-    padding-left: 50px;
+    width: 750px;
+    padding-left: 30px;
 }
