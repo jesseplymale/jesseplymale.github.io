@@ -12,7 +12,12 @@
 
     <meta name="viewport" content="width=device-width"/>
 
-    <title>{{page.title}}</title>
+    {% if page.title %}
+        <title>Jesse Plymale - {{page.title}}</title>
+    {% else %}
+        <title>Jesse Plymale</title>
+    {% endif %}
+
 </head>
 
 <body>

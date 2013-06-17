@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Music
 ---
 
 One of my favorite things to do is play music.

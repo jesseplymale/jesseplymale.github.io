@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Faith
 ---
 
 I believe we owe everything we are to God. All of us fall short

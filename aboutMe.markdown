@@ -1,5 +1,6 @@
 ---
 layout: default
+title: About Me
 ---
 
 I like to run. I used to do crazier things like half-marathons

@@ -39,7 +39,6 @@ h1 {
 #nav li {
     padding-top: 0px;
     padding-bottom: 50px;
-    padding-right: 30px;
     padding-left: 0px;
 }
 
@@ -58,10 +57,12 @@ h1 {
     text-align: right;
     border-right: 2px dotted #888888;
     font-size: 0.8em;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .content {
     display: table-cell;
-    width: 750px;
-    padding-left: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
 }

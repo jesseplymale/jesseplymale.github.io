@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Software Design
 ---
 
 I am a software engineer with [Language Computer Corporation](http://www.languagecomputer.com).
