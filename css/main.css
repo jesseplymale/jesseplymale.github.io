@@ -4,6 +4,7 @@ body {
     width: 900px;
     font-family: 'Lora', serif;
     color: #000000;
+    overflow-y: scroll;
 }
 
 h1 {
@@ -12,13 +13,16 @@ h1 {
     cursor: pointer;
 }
 
+h2 {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
 .postHeader h2 {
     font-weight: 700;
     font-size: 1.2em;
     display: inline;
     padding-right: 0.5em;
-    margin-top: 0em;
-    margin-bottom: 0em;
 }
 
 .post {
@@ -28,7 +32,8 @@ h1 {
 #main {
     display: table;
     border-collapse: collapse;
-    font-size: 18px;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 #nav ul {
@@ -56,7 +61,6 @@ h1 {
     width: 120px;
     text-align: right;
     border-right: 2px dotted #888888;
-    font-size: 0.8em;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -65,4 +69,10 @@ h1 {
     display: table-cell;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.centeredImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
