@@ -13,16 +13,40 @@ h1 {
     cursor: pointer;
 }
 
-h2 {
-    margin-top: 0em;
-    margin-bottom: 0em;
+/*.continuedLink {*/
+    /*position: relative;*/
+    /*top: -0.6em;*/
+/*}*/
+
+.postExcerpt {
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
 }
 
-.postHeader h2 {
+.postExcerpt p {
+    display: inline;
+}
+
+.categoryLabel {
+    font-style: italic;
+    font-size: 0.8em;
+    padding-right: 0.4em;
+}
+
+h2 {
+    margin-top: 0em;
+}
+
+.postHeader h3 {
     font-weight: 700;
     font-size: 1.2em;
     display: inline;
     padding-right: 0.5em;
+}
+
+.postDate {
+    font-style: italic;
+    font-size: 0.8em;
 }
 
 .post {

@@ -1,41 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
-<head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <!-- http://www.google.com/webfonts -->
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'/>
-    <!-- syntax highlighting CSS -->
-    <link rel="stylesheet" href="/css/syntax.css"/>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/main.css"/>
+---
+layout: base
+baseName: Jesse Plymale
+mainMenu:
+    - {name: 'Front Page', url: '/'}
+    - {name: 'Music', url: '/music.html'}
+    - {name: 'Groovy', url: '/groovy/'}
+    - {name: 'About my Job', url: '/aboutMyJob.html'}
+    - {name: 'Other Things', url: '/aboutMe.html'}
+---
 
-    <meta name="viewport" content="width=device-width"/>
-
-    {% if page.title %}
-        <title>Jesse Plymale - {{page.title}}</title>
-    {% else %}
-        <title>Jesse Plymale</title>
-    {% endif %}
-
-</head>
-
-<body>
-<div id="wrapper">
-    <h1 id="frontPage">{{site.name}}</h1>
-    <div id="main">
-        <div id="nav">
-            <ul>
-                <li><a href="/">Front Page</a></li>
-                <li><a href="/music.html">Music</a></li>
-                <li><a href="/aboutMyJob.html">About my Job</a></li>
-                <li><a href="/aboutMe.html">Other Things</a></li>
-            </ul>
-        </div>
-        <div class="content" id="frontPageContent">
-            {{content}}
-        </div>
-    </div>
-</div>
-</body>
-</html>
+{{content}}
