@@ -12,6 +12,10 @@ h1 {
     font-size: 54px;
 }
 
+.highlight {
+    font-size: 0.8em;
+}
+
 /*.continuedLink {*/
     /*position: relative;*/
     /*top: -0.6em;*/

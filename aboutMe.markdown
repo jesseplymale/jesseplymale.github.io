@@ -21,5 +21,5 @@ if we trust in His Son, Jesus Christ.
 > While we were still sinners, Christ died for us.
 
 <p style="text-align:right" >--
-<a href='http://www.biblegateway.com/passage/?search=romans%205:8&version=NIV'>Romans 5:8</a>
+<a href='http://www.biblegateway.com/passage/?search=romans%205:8&amp;version=NIV'>Romans 5:8</a>
 </p>

@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  Moving the page to GitHub/Jekyll
-categories: coding
+tags: coding
+categories: jesseplymale
 ---
 
 I've moved my page to be hosted on [GitHub](http://www.github.com).

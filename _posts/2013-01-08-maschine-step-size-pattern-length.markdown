@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  Maschine Step Size and Pattern Length
-categories: music
+tags: music
+categories: jesseplymale
 ---
 
 One of the things I have found confusing about learning Maschine is the 

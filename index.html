@@ -4,14 +4,14 @@ layout: default
 
 <h2>Most Recent Posts:</h2>
 
-{% for post in site.posts limit:5 %}
+{% for post in site.categories.jesseplymale limit:5 %}
 <div class="post">
     <div class="postHeader">
         <h3><a href="{{post.url}}">{{ post.title }}</a></h3>
         <span class="postDate">({{ post.date | date: "%Y-%m-%d" }})</span>
     </div>
     <div class="postExcerpt postContent">
-        <span class="categoryLabel">[{{post.categories.first}}]</span> {{post.excerpt}}
+        <span class="categoryLabel">[{{post.tags.first}}]</span> {{post.excerpt}}
     </div>
     <a href="{{post.url}}" class="continuedLink">(Continued...)</a>
 </div>
