@@ -23,8 +23,14 @@ title: Getting Started
 
 ## A Groovy Development Environment
 
-* [IntelliJ IDEA](http://www.jetbrains.com/idea/) has good Groovy support.
+* [IntelliJ IDEA](http://www.jetbrains.com/idea/) has good Groovy support. For example:
 
+  * If you define a variable with a specific type instead of with `def`, you get method auto-completion.
+
+  * Run scripts within the GUI.
+
+  * Hit `Alt-Enter` on a `@Grab` annotation to pull in all the artifacts into your Intellij module's library.
+  
 * You can run [`groovysh`](http://groovy.codehaus.org/Groovy+Shell) for a simple command-line interface.
 
   * You can run `groovyConsole` for a graphical version. If you are a Grails user and start `grails console`, it will
