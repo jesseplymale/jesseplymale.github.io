@@ -8,7 +8,7 @@ title: Links
 *   [Groovy Home](http://groovy.codehaus.org/)
 *   [Groovy API Javadocs](http://groovy.codehaus.org/gapi/)
 *   [Groovy JDK Javadocs](http://groovy.codehaus.org/groovy-jdk/)
-<ul><li>Add-ons to the standard JDK</li></ul>
+    *   Add-ons to the standard JDK
 
 ## Good Blogs
 
