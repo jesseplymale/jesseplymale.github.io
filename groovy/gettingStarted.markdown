@@ -31,7 +31,8 @@ title: Getting Started
 
   * Hit `Alt-Enter` on a `@Grab` annotation to pull in all the artifacts into your Intellij module's library.
   
-* You can run [`groovysh`](http://groovy.codehaus.org/Groovy+Shell) for a simple command-line interface.
+* You can run [`groovysh`](http://groovy.codehaus.org/Groovy+Shell) (included with the Groovy install) 
+  for a simple command-line interface.
 
   * You can run `groovyConsole` for a graphical version. If you are a Grails user and start `grails console`, it will
     give you [a `groovyConsole` which has been initialized with the Grails runtime and has access to all the classes
