@@ -45,8 +45,7 @@ After much reading of manuals, here’s my synopsis:
         quantize on your pattern and the step size is set to 1/8, all the notes will
         snap to the 1/8 bar markings.
 
-<img class="centeredImage" src="/media/svg/maschine.svg"
-     alt="Maschine Step Size and Pattern Length Diagram"/>
+<img class="centeredImage" src="/media/svg/maschine.svg" alt="Maschine Step Size and Pattern Length Diagram"/>
 
 Hopefully this little explanation will be helpful to somebody out there who is 
 also going through the Maschine learning process.
