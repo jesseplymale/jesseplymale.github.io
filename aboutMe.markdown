@@ -11,6 +11,11 @@ but nowadays a 3 or 4 mile run is perfect for me.
 I like to dance--but not solo! [Swing dancing](http://www.dsds.org)
 and country dancing are my favorites.
 
+I enjoy taking the free, high-quality courses provided by [Coursera](http://www.coursera.org). I've received statements of accomplishment for the following courses (and am working on more!):
+
+*   [Introduction to Music Production](https://www.coursera.org/course/musicproduction)
+*   [Introduction to Improvisation](https://www.coursera.org/course/improvisation)
+
 ## Faith
 
 I believe we owe everything we are to God. All of us fall short
