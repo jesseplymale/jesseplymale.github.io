@@ -5,7 +5,7 @@ tags: groovyExamples
 categories: groovy
 ---
 
-[Groovy's `as` keyword](http://mrhaki.blogspot.com/2009/09/groovy-goodness-as-keyword.html) is a bit mysterious to me.
+[Groovy's `as` keyword](http://mrhaki.blogspot.com/2009/09/groovy-goodness-as-keyword.html) is an intriguing little thing.
 
 * It's not a simple class cast. It calls methods behind the scenes to do a conversion.
 * [You can override its behavior](http://mrhaki.blogspot.com/2009/11/groovy-goodness-define-your-own-type.html) through overriding `asType()`.
