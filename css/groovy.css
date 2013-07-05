@@ -1,0 +1,109 @@
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    overflow-y: scroll;
+}
+
+h1 {
+    text-align: center;
+    font-size: 54px;
+}
+
+.highlight {
+    margin: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: 3px solid #CCCCCC;
+    font-size: 0.8em;
+}
+
+/*.continuedLink {*/
+    /*position: relative;*/
+    /*top: -0.6em;*/
+/*}*/
+
+.postExcerpt {
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+}
+
+.postExcerpt p {
+    display: inline;
+}
+
+.categoryLabel {
+    font-style: italic;
+    font-size: 0.8em;
+    padding-right: 0.4em;
+}
+
+h2 {
+    margin-top: 0em;
+}
+
+.postHeader h3 {
+    font-weight: 700;
+    font-size: 1.2em;
+    display: inline;
+    padding-right: 0.5em;
+}
+
+.postDate {
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+.post {
+    padding-bottom: 2em;
+}
+
+#main {
+    display: table;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#nav ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#nav li {
+    padding-top: 0px;
+    padding-bottom: 50px;
+    padding-left: 0px;
+}
+
+#nav a, .postHeader a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#nav a:hover, .postHeader a:hover {
+    text-decoration: underline;
+}
+
+#nav {
+    display: table-cell;
+    width: 120px;
+    text-align: right;
+    border-right: 1px solid #888888;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.content {
+    display: table-cell;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.centeredImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
