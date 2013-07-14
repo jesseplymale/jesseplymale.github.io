@@ -15,6 +15,7 @@ I enjoy taking the free, high-quality courses provided by [Coursera](http://www.
 
 *   [Introduction to Music Production](https://www.coursera.org/course/musicproduction)
 *   [Introduction to Improvisation](https://www.coursera.org/course/improvisation)
+*   [History of Rock, Part One](https://www.coursera.org/course/historyofrock1)
 
 ## Faith
 
