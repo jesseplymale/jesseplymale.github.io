@@ -13,6 +13,7 @@ title: Links
 ## Good Blogs
 
 *   [Groovy Goodness, by Mr. Haki](http://mrhaki.blogspot.com/search/label/Groovy:Goodness)
+*   [The Kaptain on ... stuff](http://www.kellyrob99.com/blog/)
 
 ## Language Overviews
 *   [Introducing Groovy (by Jim Driscoll, July 2012)](http://www.oracle.com/technetwork/articles/java/groovy-1695411.html)
