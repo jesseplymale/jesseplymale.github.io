@@ -8,12 +8,12 @@ title: Getting Started
 *   If you are on a Unix-type platform (including Mac OSX), use [GVM](http://gvmtool.net/) to easily install Groovy.
     *   You can also install [Grails](http://grails.org/) through GVM, if desired.
 
-*   If you are developing Java projects in Maven and want Groovy to be able to easily access dependencies from your own personal repository, you just need to [modify your Grape settings.](http://groovy.codehaus.org/Grape)
-    *   Grape lets you use `@Grab` annotations to easily pull Maven dependencies into your scripts (using a Maven-like tool called [Ivy](http://ant.apache.org/ivy/)).
-
 *   If you need libraries on your Groovy classpath (like database drivers):
     *   Put them in your regular Java `$CLASSPATH` environment variable or run Groovy with a `-cp` option (just like Java) 
     *   Put it in your `~/.groovy/lib` directory (create the directory if it doesn't exist)
+
+*   Grape lets you use `@Grab` annotations to easily pull Maven dependencies into your scripts (using a Maven-like tool called [Ivy](http://ant.apache.org/ivy/)). [This is a great post](http://ingorichter.blogspot.com/2012/05/grape-adding-repo-to-ivy-configuration.html) about how to add a Maven repository to the default repositories that Grape checks.
+
 
 ## A Groovy Development Environment
 
