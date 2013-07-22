@@ -43,6 +43,9 @@ Then, we can do the following: _(Note the space between the double quote and end
 
 * `-a`
     * This turns on "autosplit", which allows you to specify a regex pattern to split the line on. The split line is put in the variable `split`. (You also still have access to the variable `line` for the unsplit line.)
+ 
+* `-p`
+    * This prints out whatever you return from the commandline. Thus you will see in the example below (which uses `-a`, `-p`, and `-e` options, with a piped-in file) that we don't have to call `println`.
 
 {% highlight bash %}
 > groovy -a ',' -p -e 'if(count>1) "The host for ${split[0]} is:\t${new URL(split[2]).host}" ' < temp.csv
