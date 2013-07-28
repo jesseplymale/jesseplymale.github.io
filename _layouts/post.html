@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<div class="post">
+<div class="post" itemscope itemtype="http://www.schema.org/BlogPosting">
     <div class="postHeader">
-        <h3>{{ page.title }}</h3>
-        <span class="postDate">({{ page.date | date: "%Y-%m-%d" }})</span>
+        <h3 itemprop="headline">{{ page.title }}</h3>
+        <time class="postDate" itemprop="dateCreated" datetime="{{ page.date | date_to_xmlschema }}">({{ page.date | date: "%Y-%m-%d" }})</time>
     </div>
-    <div class="postContent">
+    <div class="postContent" itemprop="articleBody">
         {{content}}
     </div>
 </div>

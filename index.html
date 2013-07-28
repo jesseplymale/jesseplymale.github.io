@@ -4,15 +4,18 @@ layout: default
 
 <h2>Most Recent Posts:</h2>
 
+<div itemscope itemtype="http://www.schema.org/Blog">
+<span style="display:none" itemprop="name">Jesse Plymale's Blog</span>
 {% for post in site.categories.jesseplymale limit:5 %}
-<div class="post">
+<div class="post" itemprop="blogPost" itemscope itemtype="http://www.schema.org/BlogPosting">
     <div class="postHeader">
-        <h3><a href="{{post.url}}">{{ post.title }}</a></h3>
-        <span class="postDate">({{ post.date | date: "%Y-%m-%d" }})</span>
+        <h3><a href="{{post.url}}" itemprop="headline">{{ post.title }}</a></h3>
+        <time class="postDate" itemprop="dateCreated" datetime="{{ post.date | date_to_xmlschema }}">({{ post.date | date: "%Y-%m-%d" }})</time>
     </div>
     <div class="postExcerpt postContent">
-        <span class="categoryLabel">[{{post.tags.first}}]</span> {{post.excerpt}}
+        <span class="categoryLabel" itemprop="keywords">[{{post.tags.first}}]</span> {{post.excerpt}}
     </div>
-    <a href="{{post.url}}" class="continuedLink">(Continued...)</a>
+    <a href="{{post.url}}" class="continuedLink" itemprop="url">(Continued...)</a>
 </div>
 {% endfor %}
+</div>
