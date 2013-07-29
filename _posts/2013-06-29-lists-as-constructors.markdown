@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: groovyPost
 title: Unusual use of the 'as' keyword
 tags: groovyExamples
 categories: groovy

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: groovyPost
 title: Celebrating the Awesomeness of Groovy
 tags: misc
 categories: groovy

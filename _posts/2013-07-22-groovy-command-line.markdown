@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: groovyPost
 title: Groovy Scripts on the Command Line
 tags: groovyExamples
 categories: groovy
