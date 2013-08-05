@@ -4,3 +4,4 @@ pygments: true
 timezone: America/Chicago
 markdown: rdiscount
 url: http://www.jesseplymale.com
+exclude: groovyPost.groovy
