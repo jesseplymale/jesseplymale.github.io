@@ -14,4 +14,6 @@ tags: groovyExamples
 categories: groovy
 ---
 
+{% highlight bash %}
+{% endhighlight %}
 """
