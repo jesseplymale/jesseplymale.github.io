@@ -8,23 +8,34 @@ import org.apache.pdfbox.pdmodel.interactive.documentnavigation.destination.PDPa
 import org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline.PDDocumentOutline
 import org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline.PDOutlineItem
 
-// Method derived from PDFBox's Splitter.java
-public PDPage importPage(PDDocument outputPdf, PDPage pageToImport) {
-  PDPage importedPage = outputPdf.importPage(pageToImport)
-  importedPage.cropBox = pageToImport.findCropBox()
-  importedPage.mediaBox = pageToImport.findMediaBox()
-  importedPage.resources = pageToImport.resources
-  importedPage.rotation = pageToImport.findRotation()
-  return importedPage
+// Define the command-line options
+def cli = new CliBuilder(usage: 'pdfCompiler.groovy -l <pdfLibraryFile> -c <contentFile> -o <outputPdf>')
+cli.with {
+  l(longOpt: 'libraryFile', 'JSON file of PDF source files', args: 1, required: true)
+  c(longOpt: 'contentFile', 'JSON file which defines the pages from the PDF source ' +
+      'files which the output PDF will contain', args: 1, required: true)
+  o(longOpt: 'outputFile', 'Filename of the PDF file to output', args: 1, required: true)
+  h('Display help', required: false)
 }
 
+// Parse the command-line
+def opt = cli.parse(args)
+if (!opt) {
+  // opt will be null if the command line could not be parsed
+  return
+} else if (opt.h) {
+  // Print usage and return if h is selected
+  cli.usage()
+  return
+}
 // Read in the config file that was specified on the command line
-def config = new JsonSlurper().parseText(new File(args[0]).text)
+def sourcePdfs = new JsonSlurper().parseText(new File(opt.l).text)
+def contentItems = new JsonSlurper().parseText(new File(opt.c).text)
 
 // The input PDF files
 Map<String, PDDocument> pdfIdToPdf = [:]
 Map<String, Integer> pdfIdToOffset = [:]
-for(sourcePdf in config["sourcePdfs"]) {
+for(sourcePdf in sourcePdfs) {
   String pdfId = sourcePdf["pdfId"]
   pdfIdToPdf[pdfId] = PDDocument.load(sourcePdf["pdfFilename"])
   pdfIdToOffset[pdfId] = sourcePdf["pageNumberOffset"] as Integer
@@ -34,7 +45,7 @@ for(sourcePdf in config["sourcePdfs"]) {
 PDDocument outputPdf = new PDDocument()
 PDDocument firstInputPdf = pdfIdToPdf.values().first()
 outputPdf.documentInformation = firstInputPdf.documentInformation
-outputPdf.documentInformation.title = config["outputPdfTitle"]
+outputPdf.documentInformation.title = opt.o
 outputPdf.documentInformation.creationDate = Calendar.instance
 outputPdf.documentCatalog.viewerPreferences = firstInputPdf.documentCatalog.viewerPreferences
 
@@ -42,11 +53,6 @@ outputPdf.documentCatalog.viewerPreferences = firstInputPdf.documentCatalog.view
 // Derived from PDFBox's example CreateBookmarks.java
 PDDocumentOutline outline =  new PDDocumentOutline();
 outputPdf.documentCatalog.documentOutline = outline
-
-// Create top-level bookmark
-PDOutlineItem pagesOutline = new PDOutlineItem();
-pagesOutline.title = config["outputPdfTitle"]
-outline.appendChild(pagesOutline);
 
 // We will put all the pages to output into this map
 Map<String, Map<Integer, PDPage>> pdfIdToPageNumToPage = [:]
@@ -60,7 +66,7 @@ pdfIdToPdf.each { String pdfId, PDDocument inputPdf ->
 
   // Get all the page numbers which we will need from this input PDF
   Set<Integer> pageNumbersToInclude = [] as Set
-  for(contentItem in config["contentItems"]) {
+  for(contentItem in contentItems) {
     if(contentItem["inPdf"] == pdfId) {
       int pageNumber = contentItem["pageNumber"] as int
       int pageLength = contentItem["pageLength"] as int
@@ -85,7 +91,7 @@ pdfIdToPdf.each { String pdfId, PDDocument inputPdf ->
 // Now that we have all the pages in our pdfIdToPageNumToPage Map,
 // we will insert them into our output PDF, in the order given in our
 // config file's contentItems array
-for(contentItem in config["contentItems"]) {
+for(contentItem in contentItems) {
   int pageNumber = contentItem["pageNumber"] as int
   int pageLength = contentItem["pageLength"] as int
   String inPdf = contentItem["inPdf"]
@@ -101,7 +107,7 @@ for(contentItem in config["contentItems"]) {
   PDOutlineItem bookmark = new PDOutlineItem();
   bookmark.destination = dest
   bookmark.title = title
-  pagesOutline.appendChild(bookmark)
+  outline.appendChild(bookmark)
 
   // Import any following pages
   (pageLength-1).times {
@@ -111,8 +117,17 @@ for(contentItem in config["contentItems"]) {
 }
 
 // Whether we want the outline open by default
-pagesOutline.openNode()
 outline.openNode()
 
 // Save our resulting file
-outputPdf.save(config["outputPdfFilename"])
+outputPdf.save(opt.o)
+
+// Method derived from PDFBox's Splitter.java
+public PDPage importPage(PDDocument outputPdf, PDPage pageToImport) {
+  PDPage importedPage = outputPdf.importPage(pageToImport)
+  importedPage.cropBox = pageToImport.findCropBox()
+  importedPage.mediaBox = pageToImport.findMediaBox()
+  importedPage.resources = pageToImport.resources
+  importedPage.rotation = pageToImport.findRotation()
+  return importedPage
+}
