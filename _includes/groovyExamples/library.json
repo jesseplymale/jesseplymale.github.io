@@ -1,7 +1,22 @@
 [
   {
-    "pdfFilename" : "/home/jesse/dropbox/Dropbox/sheetMusic/realbooks/realBookVol1.pdf",
-    "pdfId" : "realbook1",
-    "pageNumberOffset" : 2
+    "PdfFilename" : "/home/jesse/dropbox/Dropbox/sheetMusic/realbooks/realBookVol1.pdf",
+    "PdfId" : "RB1",
+    "PageNumberOffset" : 2
+  },
+  {
+    "PdfFilename" : "/home/jesse/dropbox/Dropbox/sheetMusic/realbooks/realBookVol2.pdf",
+    "PdfId" : "RB2",
+    "PageNumberOffset" : 2
+  },
+  {
+    "PdfFilename" : "/home/jesse/dropbox/Dropbox/sheetMusic/realbooks/realBookVol3.pdf",
+    "PdfId" : "RB3",
+    "PageNumberOffset" : 2
+  },
+  {
+    "PdfFilename" : "/home/jesse/dropbox/Dropbox/sheetMusic/realbooks/realBookVol4.pdf",
+    "PdfId" : "RB4",
+    "PageNumberOffset" : 2
   }
 ]

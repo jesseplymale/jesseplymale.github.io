@@ -1,7 +1,11 @@
 #!/bin/env groovy
 
-@Grab('org.apache.pdfbox:pdfbox:1.8.2')
+@Grapes([
+  @Grab('org.apache.pdfbox:pdfbox:1.8.2'),
+  @Grab('net.sf.opencsv:opencsv:2.3')
+])
 import groovy.json.JsonSlurper
+import au.com.bytecode.opencsv.CSVReader
 import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.pdmodel.PDPage
 import org.apache.pdfbox.pdmodel.interactive.documentnavigation.destination.PDPageFitDestination
@@ -12,7 +16,7 @@ import org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline.PDOutlin
 def cli = new CliBuilder(usage: 'pdfCompiler.groovy -l <pdfLibraryFile> -c <contentFile> -o <outputPdf>')
 cli.with {
   l(longOpt: 'libraryFile', 'JSON file of PDF source files', args: 1, required: true)
-  c(longOpt: 'contentFile', 'JSON file which defines the pages from the PDF source ' +
+  c(longOpt: 'contentFile', 'CSV file which defines the pages from the PDF source ' +
       'files which the output PDF will contain', args: 1, required: true)
   o(longOpt: 'outputFile', 'Filename of the PDF file to output', args: 1, required: true)
   h('Display help', required: false)
@@ -28,17 +32,28 @@ if (!opt) {
   cli.usage()
   return
 }
+
 // Read in the config file that was specified on the command line
 def sourcePdfs = new JsonSlurper().parseText(new File(opt.l).text)
-def contentItems = new JsonSlurper().parseText(new File(opt.c).text)
+List<String[]> rows = new CSVReader(new File(opt.c).newReader("utf8")).readAll()
+List<String> header = null
+List<Map<String, String>> contentItems = []
+rows.each { String[] row ->
+  if(!header) {
+    header = row.collect { return it.trim() }
+  } else {
+    // Put a map (header->cell) for each row into the contentItems List
+    contentItems << [header, row].transpose().collectEntries {it}
+  }
+}
 
 // The input PDF files
 Map<String, PDDocument> pdfIdToPdf = [:]
 Map<String, Integer> pdfIdToOffset = [:]
 for(sourcePdf in sourcePdfs) {
-  String pdfId = sourcePdf["pdfId"]
-  pdfIdToPdf[pdfId] = PDDocument.load(sourcePdf["pdfFilename"])
-  pdfIdToOffset[pdfId] = sourcePdf["pageNumberOffset"] as Integer
+  String pdfId = sourcePdf["PdfId"]
+  pdfIdToPdf[pdfId] = PDDocument.load(sourcePdf["PdfFilename"])
+  pdfIdToOffset[pdfId] = sourcePdf["PageNumberOffset"] as Integer
 }
 
 // Create the output document
@@ -67,9 +82,9 @@ pdfIdToPdf.each { String pdfId, PDDocument inputPdf ->
   // Get all the page numbers which we will need from this input PDF
   Set<Integer> pageNumbersToInclude = [] as Set
   for(contentItem in contentItems) {
-    if(contentItem["inPdf"] == pdfId) {
-      int pageNumber = contentItem["pageNumber"] as int
-      int pageLength = contentItem["pageLength"] as int
+    if(contentItem["PdfId"] == pdfId) {
+      int pageNumber = contentItem["PageNumber"] as int
+      int pageLength = contentItem["PageLength"] as int
       (pageNumber..<(pageNumber+pageLength)).each {
         pageNumbersToInclude << it
       }
@@ -92,10 +107,10 @@ pdfIdToPdf.each { String pdfId, PDDocument inputPdf ->
 // we will insert them into our output PDF, in the order given in our
 // config file's contentItems array
 for(contentItem in contentItems) {
-  int pageNumber = contentItem["pageNumber"] as int
-  int pageLength = contentItem["pageLength"] as int
-  String inPdf = contentItem["inPdf"]
-  String title = contentItem["title"]
+  int pageNumber = contentItem["PageNumber"] as int
+  int pageLength = contentItem["PageLength"] as int
+  String inPdf = contentItem["PdfId"]
+  String title = contentItem["Title"]
 
   // Import first page
   PDPage firstPage = pdfIdToPageNumToPage[inPdf][pageNumber]
