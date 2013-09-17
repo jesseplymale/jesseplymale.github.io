@@ -33,8 +33,35 @@ if (!opt) {
   return
 }
 
-// Read in the config file that was specified on the command line
+// Read in the "PDF Library" file that was specified on the command line.
+// It is a JSON file, formatted as follows:
+//
+//   [
+//     {
+//       "PdfFilename" : "/home/jesse/realbooks/realBookVol1.pdf",
+//       "PdfId" : "RB1",
+//       "PageNumberOffset" : 2
+//     },
+//     ...
+//   ]
+//
+// PdfFilename      - The file path to the PDF file
+// PdfId            - Whatever simple name you are giving to the file. Referenced by
+//                    the PdfId column of the CSV file below
+// PageNumberOffset - Number of pages to add to the PageNumber to get to the
+//                    page in the PDF. (Intro pages often do not count toward the
+//                    page numbering in a book.)
 def sourcePdfs = new JsonSlurper().parseText(new File(opt.l).text)
+
+// Read in the CSV which contains the following columns 
+// (column titles being in the first row):
+//
+// PdfId      - The ID of the PDF file that this item is from
+// PageNumber - The page number of the content 
+//              (located at PageNumber+PageNumberOffset in the PDF file)
+// PageLength - The number of pages spanned by this item
+// Title      - The title of this item. This will be the name of the entry
+//              which is put into the PDF bookmarks listing.
 List<String[]> rows = new CSVReader(new File(opt.c).newReader("utf8")).readAll()
 List<String> header = null
 List<Map<String, String>> contentItems = []
