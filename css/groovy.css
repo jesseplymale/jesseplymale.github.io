@@ -12,12 +12,15 @@ h1 {
     font-size: 54px;
 }
 
+.gist-file {
+    font-size: 0.8em;
+}
+
 .postContent > .highlight {
     margin: 1em;
     padding-left: 1em;
     padding-right: 1em;
     border: 3px solid #CCCCCC;
-    font-size: 0.8em;
 }
 
 /*.continuedLink {*/
