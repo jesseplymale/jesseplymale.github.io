@@ -1,21 +1,9 @@
 ---
-layout: default
+layout: baseNoSidebar
 ---
 
-<h2>Most Recent Posts:</h2>
-
-<div itemscope itemtype="http://www.schema.org/Blog">
-<span style="display:none" itemprop="name">Jesse Plymale's Blog</span>
-{% for post in site.categories.jesseplymale limit:5 %}
-<div class="post" itemprop="blogPost" itemscope itemtype="http://www.schema.org/BlogPosting">
-    <div class="postHeader">
-        <h3><a href="{{post.url}}" itemprop="headline">{{ post.title }}</a></h3>
-        <time class="postDate" itemprop="dateCreated" datetime="{{ post.date | date_to_xmlschema }}">({{ post.date | date: "%Y-%m-%d" }})</time>
-    </div>
-    <div class="postExcerpt postContent">
-        <span class="categoryLabel" itemprop="keywords">[{{post.tags.first}}]</span> {{post.excerpt}}
-    </div>
-    <a href="{{post.url}}" class="continuedLink" itemprop="url">(Continued...)</a>
-</div>
-{% endfor %}
+<div id="frontPageContent">
+  {% for menuItem in site.jesseMenu %}
+  <p class="frontPageItem"><a href="{{menuItem['url']}}">{{menuItem['name']}}</a></p>
+  {% endfor %}
 </div>

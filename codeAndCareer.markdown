@@ -32,7 +32,7 @@ Visit me at [LinkedIn](http://www.linkedin.com/in/jesseplymale).
 *   Web
     *   Ruby on Rails, MediaWiki, Tomcat, JSON, Jekyll
 *   Other
-    *   MySQL, Velocity Templates, IntelliJ IDEA/Netbeans/Eclipse IDEs, SAS, Logic Pro
+    *   MySQL, Velocity Templates, IntelliJ IDEA/Netbeans/Eclipse IDEs, SAS, Logic Pro, Redis
 
 ## Other Programming Miscellany
 

@@ -6,7 +6,7 @@ title: About Me
 ## About Me
 
 I like to run. I used to do crazier things like half-marathons
-but nowadays a 3 or 4 mile run is perfect for me.
+but nowadays a 3 or 4 mile run is perfect for me. [Arbor Hills Nature Preserve](http://www.plano.gov/facilities.aspx?page=detail&rid=20) and [White Rock Lake](http://www.whiterocklake.org/) are great places to run and enjoy nature at the same time.
 
 I like to dance--but not solo! [Swing dancing](http://www.dsds.org)
 and country dancing are my favorites.
@@ -17,6 +17,8 @@ I enjoy taking the free, high-quality courses provided by [Coursera](http://www.
 *   [Introduction to Improvisation](https://www.coursera.org/course/improvisation)
 *   [History of Rock, Part One](https://www.coursera.org/course/historyofrock1)
 *   [History of Rock, Part Two](https://www.coursera.org/course/historyofrock2)
+
+The [Dallas Arts District](http://www.thedallasartsdistrict.org/) is one of my favorite Dallas urban spaces. The [Dallas Museum of Art](http://www.dallasmuseumofart.org/) and [Klyde Warren Park](http://www.klydewarrenpark.org/) are two of my favorite spots there. I picked the right time to be a Dallas resident.
 
 ## Faith
 

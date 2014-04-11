@@ -5,3 +5,10 @@ timezone: America/Chicago
 markdown: rdiscount
 url: http://www.jesseplymale.com
 exclude: groovyPost.groovy
+
+jesseMenu:
+    - {name: 'Musings', url: '/posts.html'}
+    - {name: 'Music', url: '/music.html'}
+    - {name: 'Ancient Greek', url: '/ancientGreek.html'}
+    - {name: 'Code &amp; Career', url: '/codeAndCareer.html'}
+    - {name: 'Other Things', url: '/aboutMe.html'}
