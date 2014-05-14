@@ -10,7 +10,7 @@ title: Code and Career
 </a>
 </div>
 
-I am a software engineer with [Language Computer Corporation](http://www.languagecomputer.com).
+I am a software developer and integrator with [USAA](http://www.usaa.com).
 
 Visit me at [LinkedIn](http://www.linkedin.com/in/jesseplymale).
 
