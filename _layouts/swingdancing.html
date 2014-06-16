@@ -1,0 +1,31 @@
+---
+baseName: Dallas Swing Dancing
+---
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <!-- http://www.google.com/webfonts -->
+    <link href='http://fonts.googleapis.com/css?family=Limelight|Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/swingdancing.css"/>
+
+    <meta name="viewport" content="width=device-width"/>
+
+    {% if page.title %}
+        <title>{{page.baseName}} - {{page.title}}</title>
+    {% else %}
+        <title>{{page.baseName}}</title>
+    {% endif %}
+
+</head>
+
+<body>
+    <div id="main">
+        <h1 id="frontPage">{{page.baseName}}</h1>
+        {{content}}
+    </div>
+</body>
+</html>
