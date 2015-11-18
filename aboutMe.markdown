@@ -3,7 +3,9 @@ layout: default
 title: About Me
 ---
 
-## About Me
+Hello! Here's my spot on the web.
+
+## Some Random Things About Me
 
 I like to run. I used to do crazier things like half-marathons
 but nowadays a 3 or 4 mile run is perfect for me. [Arbor Hills Nature Preserve](http://www.plano.gov/facilities.aspx?page=detail&rid=20) and [White Rock Lake](http://www.whiterocklake.org/) are great places to run and enjoy nature at the same time.

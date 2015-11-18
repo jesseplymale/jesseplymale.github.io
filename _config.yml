@@ -1,5 +1,5 @@
 name: Jesse Plymale
-pygments: true
+highlighter: none
 
 timezone: America/Chicago
 markdown: rdiscount
