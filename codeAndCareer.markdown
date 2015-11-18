@@ -33,10 +33,3 @@ Visit me at [LinkedIn](http://www.linkedin.com/in/jesseplymale).
     *   Ruby on Rails, MediaWiki, Tomcat, JSON, Jekyll
 *   Other
     *   MySQL, Velocity Templates, IntelliJ IDEA/Netbeans/Eclipse IDEs, SAS, Logic Pro, Redis
-
-## Other Programming Miscellany
-
-My primary expertise is in Java, but working in scripting languages has always been fun for me. I really caught the scripting bug when I encountered Python. This year, I've started digging into Groovy as well, and I really enjoy the fact that it combines a lot of the ease of Python as well as being fully-interoperable with all of my Java knowledge.
-
-So [here's my ode to Groovy](/groovy).
-
