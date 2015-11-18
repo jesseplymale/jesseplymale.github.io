@@ -87,7 +87,6 @@ var BasePage = React.createClass({
         if(data.startsWith(HEADER_DELIM) && data.includes(HEADER_DELIM, HEADER_DELIM.length)) {
           let endOfHeader = data.indexOf(HEADER_DELIM, HEADER_DELIM.length) + HEADER_DELIM.length;
           data = data.slice(endOfHeader);
-          console.log(data);
         }
         this.setState({renderedMarkdownForSelectedUrl: marked(data)});
       },
