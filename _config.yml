@@ -5,7 +5,7 @@ timezone: America/Chicago
 markdown: rdiscount
 url: http://www.jesseplymale.com
 exclude: groovyPost.groovy
-keep_files: ['/']
+keep_files: ['aboutMe.markdown', '*.markdown']
 
 jesseMenu:
     - {name: 'Musings', url: '/posts.html'}
