@@ -79,7 +79,7 @@ var BasePage = React.createClass({
 
   onNavigationSelection(selectedUrl) {
     $.ajax({
-      url: selectedUrl,
+      url: '_rawMarkdown/' + selectedUrl,
       dataType: 'text',
       cache: true,
       success: (data) => {
