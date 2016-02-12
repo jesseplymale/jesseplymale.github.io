@@ -13,7 +13,7 @@ but nowadays a 3 or 4 mile run is perfect for me. [Arbor Hills Nature Preserve](
 I like to dance--but not solo! [Swing dancing](http://www.dsds.org)
 and country dancing are my favorites.
 
-I enjoy taking the free, high-quality courses provided by [Coursera](http://www.coursera.org). I've received statements of accomplishment for the following courses (and am working on more!):
+I enjoy taking the free, high-quality courses provided by [Coursera](http://www.coursera.org). I've received statements of accomplishment for the following courses:
 
 *   [Introduction to Music Production](https://www.coursera.org/course/musicproduction)
 *   [Introduction to Improvisation](https://www.coursera.org/course/improvisation)
@@ -22,10 +22,14 @@ I enjoy taking the free, high-quality courses provided by [Coursera](http://www.
 
 The [Dallas Arts District](http://www.thedallasartsdistrict.org/) is one of my favorite Dallas urban spaces. The [Dallas Museum of Art](http://www.dallasmuseumofart.org/) and [Klyde Warren Park](http://www.klydewarrenpark.org/) are two of my favorite spots there. I picked the right time to be a Dallas resident.
 
+If ya enjoy pondering Meyers-Briggs, I'm something between an [ISFP](http://www.16personalities.com/isfp-personality) and an [ISTP](http://www.16personalities.com/istp-personality).
+
+By and large, I'm happily uninterested in politics, although I do enjoy reposting liberal news articles every once and a while to make my super-Republican friends antsy. 
+
 ## Faith
 
 I believe we owe everything we are to God. All of us fall short
-of his best--but thankfully he extends His forgiveness to all of us,
+of His best--but thankfully He extends His forgiveness to all of us,
 if we trust in His Son, Jesus Christ.
 
 > But God demonstrates his own love for us in this:
