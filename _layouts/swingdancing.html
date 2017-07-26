@@ -1,5 +1,4 @@
 ---
-baseName: Dallas Swing Dancing
 ---
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -15,16 +14,16 @@ baseName: Dallas Swing Dancing
     <meta name="viewport" content="width=device-width"/>
 
     {% if page.title %}
-        <title>{{page.baseName}} - {{page.title}}</title>
+        <title>{{site.name}} - {{page.title}}</title>
     {% else %}
-        <title>{{page.baseName}}</title>
+        <title>{{site.name}}</title>
     {% endif %}
 
 </head>
 
 <body>
     <div id="main">
-        <h1 id="frontPage">{{page.baseName}}</h1>
+        <h1 id="frontPage">Dallas Swing Dancing</h1>
         {{content}}
     </div>
 </body>
