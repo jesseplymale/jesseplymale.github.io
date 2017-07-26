@@ -78,13 +78,12 @@ h2 {
     padding-left: 0px;
 }
 
-#nav .navItem, .postHeader .navItem {
+#nav a, .postHeader a {
     text-decoration: none;
     color: #000000;
-    cursor: pointer;
 }
 
-#nav .navItem:hover, .postHeader .navItem:hover {
+#nav a:hover, .postHeader a:hover {
     text-decoration: underline;
 }
 

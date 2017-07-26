@@ -12,32 +12,31 @@ title: Code and Career
 
 I am a software developer and integrator with [USAA](http://www.usaa.com).
 
-I specialize in customer-focused development of UI-driven applications. 
-My strongest programming languages are JavaScript, Java, and Python.
-
 Visit me at [LinkedIn](http://www.linkedin.com/in/jesseplymale).
 
 ## My Specialties
-*   Web and Hybrid Mobile App Development with JavaScript
-   *   Using frameworks such as AngularJS and React.js, along with jQuery and D3.js
-   *   Web technologies such as HTML, SASS/CSS, and SVG
-   *   Hybrid Mobile App Development with the Ionic Framework
-*   iPhone development with XCode, Objective-C, and Swift
-*   Extensive background in Java, including Swing, JAX-RS, JPA, Guava, and JUnit
-*   Experience with Python (with Google App Engine experience) and Groovy (with Grails experience)
+
+*   Primary fluency in Java, including Swing, JAXB, JAX-RS, JPA, Jersey, Jackson, Guava, and JUnit
+*   Also highly proficient in Python and Groovy (both in scripting and in Google App Engine and Grails)
+*   XML technologies, such as XML Schema, XPath, XSLT, SVG, and JAXB
+*   Web technologies, such as HTML/XHTML, JSON, CSS, SVG, Javascript, jQuery, and D3.js
+*   Tools such as Maven, Ant, Git, and ClearCase/ClearQuest, using Linux, Mac OS X, and Windows
 
 ## Additional Technical Skills
-*   JavaScript
-   *   Cordova, Node.js, gulp.js, webpack, ECMAScript 2015 (ES6) with Babel, JSON
 *   Java
-   *   JSP, JMS/Oracle AQ, Log4J, JAXB, JavaCC
+    *   RMI, JavaCC, Log4J, Java Advanced Imaging (JAI), JSP, JMS/Oracle AQ, Portlets
 *   XML
-   *   JDOM/SAX/DOM APIs, SOAP, WSDL, XML Schema, XPath, XSLT, SVG
+    *   JDOM/SAX/DOM APIs, SOAP, WSDL
 *   Languages
-   *   C/C++ (with STL), SQL, Bourne shell, Markdown
+    *   C/C++ (with STL), SQL, Perl, Bourne shell, YAML, Markdown
 *   Web
-   *   Ruby on Rails, MediaWiki, Confluence, Tomcat, Jekyll
-*   Dev Tools
-   *   Maven, Ant, Git, Gradle, IBM RTC/Jazz, Rational ClearCase/ClearQuest
+    *   Ruby on Rails, MediaWiki, Tomcat, JSON, Jekyll
 *   Other
-   *   Template languages (Jinja2, Velocity), Redis, Logic Pro
+    *   MySQL, Velocity Templates, IntelliJ IDEA/Netbeans/Eclipse IDEs, SAS, Logic Pro, Redis
+
+## Other Programming Miscellany
+
+My primary expertise is in Java, but working in scripting languages has always been fun for me. I really caught the scripting bug when I encountered Python. This year, I've started digging into Groovy as well, and I really enjoy the fact that it combines a lot of the ease of Python as well as being fully-interoperable with all of my Java knowledge.
+
+So [here's my ode to Groovy](/groovy).
+

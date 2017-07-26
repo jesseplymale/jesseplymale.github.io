@@ -6,9 +6,9 @@ layout: baseNoSidebar
 
 <div id="nav">
     <ul>
-        <li><a href="/" class="navItem">Front Page</a></li>
+        <li><a href="/">Front Page</a></li>
         {% for menuItem in site.jesseMenu %}
-        <li><a href="{{menuItem['url']}}" class="navItem">{{menuItem['name']}}</a></li>
+        <li><a href="{{menuItem['url']}}">{{menuItem['name']}}</a></li>
         {% endfor %}
     </ul>
 </div>
